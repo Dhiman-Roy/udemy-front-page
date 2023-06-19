@@ -1,0 +1,698 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ body{
+    margin: 0;
+ }
+ .container{
+   max-width: 3000px;
+ }
+
+ 
+ .menuBar{
+   
+  /* display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows:4.7vw;
+   align-items: center;
+   justify-items: center;*/
+   display:flex;
+   
+   justify-content:space-between ;
+   flex-wrap:wrap;
+   align-items: center;
+    background-color: white;
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px  rgba(0, 0, 0, 0.08);
+    padding: 1rem 2rem;
+    width: 100%;
+   
+    
+    
+ }
+ .menuBar > div{
+   margin-right: 1rem;
+ }
+ .menuBar > .globe{
+   margin-right: 0%;
+ }
+
+ .searchBar{
+    display: flex;
+    background-color: white;
+    border-radius: 3vw;
+    height: 3vw;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 3;
+    border: 1px solid grey;
+    
+    
+ }
+ .searchBar  input[type="text"]{
+    border: none;
+    padding-left: 1vw;
+     border-radius: 3vw; 
+     flex-basis: 90%; 
+
+ }
+ .searchBar  input[type="text"]:focus {
+   outline: none; 
+
+}
+
+
+
+.menuBar .menuBar-button > button{
+   border: none;
+   background-color: white;
+   font-size: .9rem;
+} 
+.cartlogo{
+   font-size: 1.3rem;
+}
+.globe{
+   font-size: 1.2rem;
+   border: 1px solid grey;
+   padding: .5rem
+}
+.loginButton input[type="button"]{
+   font-size: 1rem;
+   font-weight: bold;
+   padding: .5rem;
+   background-color: white;
+   border: 1px solid grey;
+}
+.signupButton input[type="button"]{
+   font-size: 1rem;
+   font-weight: bold;
+   padding: .5rem;
+   color: white;
+   background-color: black;
+}
+.webBodyContainer{
+   max-width: 1340px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: auto;
+  margin-right: auto;
+   
+}
+
+.banner{
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   
+   position: relative;
+}
+.bannerImage{
+  position: relative;
+}
+.bannerImage .imageContainer{
+  max-width: 100%;
+}
+.bannerImage img{
+   width: 100%;
+   height: auto;
+}
+.bannerInfo{
+   position: absolute;
+   left: 10rem;
+   top:25%;
+   padding: .5rem;
+   background-color: white;
+   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+  
+   max-width: 20rem;
+   max-height: 10rem;
+   
+   
+}
+.bannerInfo > h1{
+   margin: 0;
+   font-size: 1.7em;
+}
+.bannerInfo > p{
+   font-size: 1em;
+   margin-top: .8em;
+}
+
+.buttonLeft{
+   position: absolute;
+   
+    left: 2vw;
+   top: 50%;
+   
+}
+.buttonRight{
+   position: absolute;
+    right: 2vw;
+   top: 50%;
+} 
+.buttonLeft {
+   border-radius: 50%;
+   font-size: 1.5rem;
+   padding: 5px;
+   height: 40px;
+   width: 40px;
+   border: none;
+   color: white;
+   background-color:  rgba(0, 0, 0, 0.821);
+}
+.buttonRight {
+   border-radius: 50%;
+   font-size: 1.5rem;
+   padding: .5vw;
+   height: 40px;
+   width: 40px;
+   border: none;
+   color: white;
+   background-color: rgba(0, 0, 0, 0.821);
+}
+.buttonLeft:hover{
+   background-color: rgba(0, 0, 0, 0.656);
+}
+.buttonRight:hover{
+   background-color: rgba(0, 0, 0, 0.656);
+}
+
+.normalInfo{
+   margin-top: 4vw;
+   
+}
+.normalInfo > h1{
+   margin: 0;
+}
+.normalInfo > p{
+   font-size: 1.2em;
+}
+.courseSection{
+   display: flex;
+   
+}
+.courseSection input[type="button"]{
+   font-size: 1em;
+   border: none;
+   margin-right: 3vw;
+   padding: 0;
+   background-color: white;
+}
+
+/*start courseName Section*/
+.courseName{
+   padding: 2vw;
+   border: 1px solid grey;
+   margin-top: 1vw;
+}
+.courseName > h1{
+   margin: 0;
+   font-size: 1.6em;
+}
+.courseName > p{
+   font-size: 1em;
+   padding-right: 40%;
+   letter-spacing: 1px;
+   word-spacing: 2px;
+   margin-bottom: 0%;
+}
+.courseName > input[type=button]{
+   margin: 1.5vw 0 2vw 0;
+   padding: .8vw;
+   border: 1px solid black;
+   font-weight: bold;
+   background-color: white;
+}
+
+.courseCardContainer{
+   display: grid;
+   grid-template-columns: repeat(6, 250px);
+   grid-template-rows: 1fr;
+   grid-gap: 1vw;
+   grid-auto-flow:column dense;
+   overflow-x: scroll;
+   
+}
+.courseCardContainer::-webkit-scrollbar {
+   display: none;
+}
+.courseCardContainer {
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+ }
+.courseCard > img{
+   width: 100%;
+   height: 150px;
+}
+.courseCard > h2{
+   font-size: 1em;
+   margin: .5em 0;
+   
+}
+ 
+.courseCard > p{
+   margin: .3em 0;
+   font-size: .8em;
+}
+.courseReview{
+   display: flex;
+   justify-content: space-between;
+   margin: 1em 4em 1em 0;
+}
+.courseReview .point{
+   color: goldenrod;
+   font-weight: bold;
+}
+.stars i{
+   color: gold;
+   
+}
+.courseCard .price{
+   font-weight: bold;
+}
+
+/*catagory section*/
+.catagories{
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+}
+.catagories > h1{
+   font-size: 2.3rem;
+}
+.catagoriesCardContainer{
+   display: grid;
+   grid-template-columns: repeat(4,15rem);
+   grid-template-rows: 20rem 20rem;
+   grid-auto-rows: 20rem;
+   grid-template: max-content;
+   grid-column-gap: 1rem;
+   grid-row-gap: 3rem;
+   justify-content: space-between;
+   align-items: center;
+}
+.catagoriesCard{
+   padding: 5px;
+  max-width: 20rem;
+   
+}
+
+.catagoriesCard img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+   transition: .2s;
+}
+.catagoriesCard img:hover{
+   transform: scale(1.08);
+}
+.catagoriesCard p{
+   font-weight: bold;
+}
+
+/* start features side */
+.featureContainer{
+   background-color: rgba(0, 0, 0, 0.063);
+  
+   margin-top: 2vw ;
+   margin-bottom: 2vw;
+   
+}
+.featureTopics{
+  max-width: 1340px;
+ padding: 3vw 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  padding-bottom: 3vw;
+  
+}
+.featureTopics h1{
+   font-size: 1.8rem;
+   margin-top: 3vw;
+}
+.features{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.features > div{
+   margin: 1rem;
+}
+.features h3{
+   
+   font-size: 1.3rem;
+}
+.features p{
+   margin-top: .6vw;
+   margin-bottom: 2vw;
+   font-size: .8rem;
+   font-weight: 100;
+   color: rgba(0, 0, 0, 0.737);
+}
+.featureTopics > input[type=button]{
+   padding: 8px;
+   border: 1px solid black;
+   font-size: .8rem;
+   font-weight: bold;
+   cursor:pointer;
+}
+/* start instructor side */
+
+.instructorContainer{
+   margin: 4vw 0;;
+}
+
+.instructorCard{
+   display: flex;
+   max-width: 1000px;
+   justify-content: space-between;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 2vw;
+}
+.instructorImage{
+   
+   width: 65rem;
+   margin-right: 5vw;
+}
+.instructorImage img{
+   width: 100%;
+   height: auto;
+   
+}
+
+.instructorCard .description{
+   margin-top: auto;
+  margin-bottom: auto;
+   
+}
+.instructorCard .description h1{
+   
+   font-weight: bold;
+   font-size: 2rem;
+}
+.instructorCard .description p{
+   font-size: 1.5rem;
+}
+.instructorCard input[type="button"]{
+   padding: 1rem;
+   background-color: rgba(0, 0, 0, 0.871);
+   color: white;
+   font-weight: bold;
+   font-size: 1rem;
+   cursor: pointer;
+   border: none;
+}
+.instructorCard input[type="button"]:hover {
+   background-color: black;
+}
+
+
+/* design companies side */
+.companyContainer{
+   background-color: rgba(0, 0, 0, 0.063);
+}
+.companies{
+  margin: 0 auto;
+  padding: 1.2rem 0;
+   max-width: 25rem;
+   
+}
+.companies h1{
+   text-align: center;
+   font-size: 1.5rem;
+}
+.companies .logo{
+   display: flex;
+   justify-content: center;
+}
+
+.companies img{
+   width: 5rem;
+}
+
+/* design business side */
+
+.uBusinessContainer{
+   display: flex;
+   justify-content: space-between;
+   max-width: 1000px;
+   margin: 5rem auto;
+}
+.businessDetails{
+   margin: auto 0;
+}
+.businessDetails img{
+   max-width: 20rem;
+}
+.businessDetails p{
+   padding: 0 5rem 0 1.2rem;
+   margin: 0;
+   font-size: 1.5rem;
+}
+.businessDetails input[type="button"]{
+   padding: .9rem;
+   background-color: rgba(0, 0, 0, 0.871);
+   color: white;
+   font-weight: bold;
+   font-size: 1rem;
+   cursor: pointer;
+   border: none;
+   margin: 1rem auto auto 1.2rem;
+}
+.businessImage{
+   width: 65rem;
+}
+
+
+.businessImage img{
+   width: 100%;
+   height: auto;
+}
+
+/* design education side */
+
+.educationContainer{
+   display: flex;
+   max-width: 1000px;
+   margin: 3rem auto;
+   justify-content: space-between;
+}
+.educationContainer .image{
+   width: 65rem;
+   flex-basis: 50%;
+}
+.educationContainer img{
+   width: 100%;
+   height: auto;
+}
+.educationContainer .detailsContainer{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.educationContainer .details{
+   width: 30rem;
+   padding: 2rem;
+   padding-right: 3rem;
+   
+}
+.educationContainer p{
+   font-size: 1.5rem;
+}
+.educationContainer input[type="button"]{
+   padding: .9rem;
+   background-color: rgba(0, 0, 0, 0.871);
+   color: white;
+   font-weight: bold;
+   font-size: 1rem;
+   cursor: pointer;
+   border: none;
+}
+
+/*footer design*/
+.footerContainer{
+   padding: 2rem 5rem;
+   background-color: rgba(0, 0, 0, 0.904);
+   color: white;
+   font-weight: 400;
+}
+
+.section1{
+   display: flex;
+   justify-content: space-between;
+}
+.section1 .part4{
+   flex-basis: 40%;
+   
+   display: flex;
+   justify-content: flex-end;
+   margin-bottom: auto;
+   
+}
+.section1 p{
+   font-size: .9rem;
+}
+.section1 button{
+   padding: .7rem 1rem;
+   font-size: .9rem;
+   color: white;
+   background-color: rgba(0, 0, 0, 0.904);
+   border: 1px solid white;
+   letter-spacing: .15rem;
+   cursor: pointer;
+}
+.section2{
+   display: flex;
+   justify-content: space-between;
+   margin-top: 2rem;
+}
+.section2 p, span{
+   font-size: .7rem;
+}
+
+/* start media query */
+@media (max-width: 890px){
+  .catagoriesCardContainer{
+   grid-template-columns: repeat(auto-fit, 9rem);
+   grid-template-rows: 3rem 3rem;
+   grid-auto-rows: 3rem;
+   grid-row-gap: 1em;
+   grid-auto-flow: dense;
+  }
+  .catagoriesCard p{
+   border: 1px solid black;
+   border-radius: 5px;
+   text-align: center;
+   padding: .5rem;
+  }
+  .banner{
+     
+   flex-direction: column;
+}
+.bannerInfo{
+   position: static;
+   margin: 1rem 0;
+   
+}
+}
+
+@media (max-width: 750px){
+   .menuBar > .Categories,.searchBar, .loginButton, .signupButton{
+      display: none;
+   }
+   .courseSection{
+      flex-wrap: wrap;
+   }
+   .instructorCard{
+      flex-direction: column;
+      
+   }
+   .companies .logo{
+      flex-wrap: wrap;
+   }
+   .instructorImage {
+      width: 10rem;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .instructorCard .description{
+      /*display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: .2rem;*/
+      width: 100%;
+      text-align: center;
+      padding: 0 2rem;
+   }
+   .instructorCard .description > h1{
+      margin-bottom: 0%;
+   }
+   .instructorCard .description > P{
+      font-size: 1rem;
+      text-align: center;
+   }
+
+
+   .uBusinessContainer{
+      flex-direction: column-reverse;
+
+   }
+   .uBusinessContainer .businessImage{
+      width: 10rem;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .uBusinessContainer .businessDetails{
+      width: 100%;
+      text-align: center;
+      padding: 0 2rem;
+   }
+   .uBusinessContainer .businessDetails img{
+      width: 100%;
+   }
+   .uBusinessContainer .businessDetails .image{
+      width: 15rem;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .uBusinessContainer .businessDetails p{
+      font-size: 1rem;
+      padding: 0;
+      
+   }
+   .uBusinessContainer .businessDetails input[type="button"]{
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+
+   .educationContainer{
+      flex-direction: column;
+      align-items: center;
+
+   }
+   .educationContainer .image{
+      width: 10rem;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   
+   .educationContainer .details{
+      padding: 0 2rem;
+      width: 100%;
+      text-align: center;
+   }
+   .educationContainer .details h1{
+      
+      text-align: center;
+   }
+   .educationContainer p{
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1rem;
+   }
+   .educationContainer .details input[type="button"]{
+      margin-left: auto;
+      margin-right: auto;
+      
+   }
+
+
+
+
+   .footerContainer .section1{
+      flex-direction: column;
+   }
+   .footerContainer .section1 .part4{
+      align-self: flex-start;
+   }
+}
+
+
+
+ 
